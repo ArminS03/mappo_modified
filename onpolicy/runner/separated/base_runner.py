@@ -5,6 +5,7 @@ import os
 import numpy as np
 from itertools import chain
 import torch
+from tqdm import tqdm
 from tensorboardX import SummaryWriter
 
 from onpolicy.utils.separated_buffer import SeparatedReplayBuffer
