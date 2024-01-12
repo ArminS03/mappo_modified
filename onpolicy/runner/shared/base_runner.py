@@ -142,6 +142,7 @@ class Runner(object):
 
     def save(self, episode=0):
         """Save policy's actor and critic networks."""
+        print(f'saving to: {str(self.save_dir)}')
         if self.algorithm_name == "mat" or self.algorithm_name == "mat_dec":
             self.policy.save(self.save_dir, episode)
         else:
