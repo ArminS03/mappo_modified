@@ -50,7 +50,6 @@ class ValueNorm(nn.Module):
         else:
             weight = self.beta
 
-        weight = weight.to(**self.tpdv)
         batch_mean = batch_mean.to(**self.tpdv)
         self.running_mean.mul_(weight).add_(batch_mean * (1.0 - weight))
         self.running_mean_sq.mul_(weight).add_(batch_sq_mean * (1.0 - weight))
