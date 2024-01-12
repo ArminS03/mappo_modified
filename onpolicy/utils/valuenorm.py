@@ -49,9 +49,8 @@ class ValueNorm(nn.Module):
             weight = self.beta ** batch_size
         else:
             weight = self.beta
-
-        self.running_mean = self.running_mean.to(**self.tpdv)
         batch_mean = batch_mean.to(**self.tpdv)
+        batch_sq_mean = batch_sq_mean.to(**self.tpdv)
         self.running_mean.mul_(weight).add_(batch_mean * (1.0 - weight))
         self.running_mean_sq.mul_(weight).add_(batch_sq_mean * (1.0 - weight))
         self.debiasing_term.mul_(weight).add_(1.0 * (1.0 - weight))
