@@ -157,6 +157,7 @@ def main(args):
         from onpolicy.runner.separated.mpe_runner import MPERunner as Runner
 
     runner = Runner(config)
+    print(f'run dir: {run_dir}')
     runner.run()
     
     # post process
