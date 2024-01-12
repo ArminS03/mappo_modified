@@ -4,6 +4,7 @@ import torch
 from onpolicy.runner.shared.base_runner import Runner
 import wandb
 import imageio
+from tqdm import tqdm
 
 def _t2n(x):
     return x.detach().cpu().numpy()
@@ -19,7 +20,7 @@ class MPERunner(Runner):
         start = time.time()
         episodes = int(self.num_env_steps) // self.episode_length // self.n_rollout_threads
 
-        for episode in range(episodes):
+        for episode in tqdm(range(episodes)):
             if self.use_linear_lr_decay:
                 self.trainer.policy.lr_decay(episode, episodes)
 
