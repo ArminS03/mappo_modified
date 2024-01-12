@@ -15,5 +15,5 @@ do
     --scenario_name ${scenario} --num_agents ${num_agents} --num_landmarks ${num_landmarks} --seed ${seed} \
     --n_training_threads 1 --n_rollout_threads 1 --num_mini_batch 1 --episode_length 25 --num_env_steps 10000 \
     --ppo_epoch 15 --gain 0.01 --lr 7e-4 --critic_lr 7e-4 --user_name "yuchao" --use_eval --eval_interval 2 \
-    --save_interval 1
+    --save_interval 1 --share_policy False
 done
