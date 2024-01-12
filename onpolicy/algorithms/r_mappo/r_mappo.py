@@ -148,6 +148,7 @@ class R_MAPPO():
         self.policy.actor_optimizer.step()
 
         # critic update
+        values = values.to(**self.tpdv) 
         value_loss = self.cal_value_loss(values, value_preds_batch, return_batch, active_masks_batch)
 
         self.policy.critic_optimizer.zero_grad()
