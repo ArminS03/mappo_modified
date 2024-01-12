@@ -78,7 +78,7 @@ def main(args):
         all_args.use_centralized_V = False
     else:
         raise NotImplementedError
-
+    print(f"share policy: {all_args.share_policy}")
     assert (all_args.share_policy == True and all_args.scenario_name == 'simple_speaker_listener') == False, (
         "The simple_speaker_listener scenario can not use shared policy. Please check the config.py.")
 
