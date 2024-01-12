@@ -101,8 +101,9 @@ def main(args):
     if not run_dir.exists():
         os.makedirs(str(run_dir))
 
+    all_args.use_wandb = False
     # wandb
-    if False:
+    if all_args.use_wandb:
         run = wandb.init(config=all_args,
                          project=all_args.env_name,
                          entity=all_args.user_name,
