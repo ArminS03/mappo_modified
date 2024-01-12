@@ -44,10 +44,8 @@ class MPERunner(Runner):
             total_num_steps = (episode + 1) * self.episode_length * self.n_rollout_threads
             
             # save model
-            print("save model")
             if (episode % self.save_interval == 0 or episode == episodes - 1):
                 self.save()
-            print("after save model")
 
             # log information
             if episode % self.log_interval == 0:
