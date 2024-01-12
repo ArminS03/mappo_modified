@@ -120,6 +120,7 @@ def main(args):
         "run_dir": run_dir
     }
 
+    print(f'share policy: {all_args.share_policy}')
     # run experiments
     if all_args.share_policy:
         from onpolicy.runner.shared.mpe_runner import MPERunner as Runner
