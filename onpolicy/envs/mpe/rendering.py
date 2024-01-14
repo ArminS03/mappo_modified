@@ -13,10 +13,6 @@ if "Apple" in sys.version:
 
 from gym import error
 
-from pyvirtualdisplay import Display
-display = Display(visible=0, size=(1400, 900))
-display.start()
-
 try:
     import pyglet
 except ImportError as e:
