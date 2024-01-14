@@ -241,6 +241,7 @@ class MPERunner(Runner):
     def render(self):        
         all_frames = []
         for episode in range(self.all_args.render_episodes):
+            print(f'episode: {episode}')
             episode_rewards = []
             obs = self.envs.reset()
             if self.all_args.save_gifs:
