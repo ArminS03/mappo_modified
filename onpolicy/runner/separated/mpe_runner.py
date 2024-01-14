@@ -310,7 +310,8 @@ class MPERunner(Runner):
                 average_episode_rewards = np.mean(np.sum(episode_rewards[:, :, agent_id], axis=0))
                 print("eval average episode rewards of agent%i: " % agent_id + str(average_episode_rewards))
         print("saving ...")
+        print(len(all_frames))
         for frame in all_frames:
-            print(type(frame))
+            print((frame.shape))
         if self.all_args.save_gifs:
             imageio.mimsave('./render.gif', all_frames, duration=self.all_args.ifi)
