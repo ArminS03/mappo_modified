@@ -112,6 +112,7 @@ dependencies:
       - jsonschema==3.2.0
       - kiwisolver==1.0.1
       - lockfile==0.12.2
+      - mappo==0.0.1
       - matplotlib==3.0.0
       - mock==2.0.0
       - monotonic==1.5
@@ -119,6 +120,8 @@ dependencies:
       - mpi4py==3.0.3
       - mpyq==0.2.5
       - msgpack==1.0.0
+      - mujoco-py==2.0.2.13
+      - mujoco-worldgen==0.0.0
       - multidict==4.7.6
       - munch==2.3.2
       - nvidia-ml-py3==7.352.0
