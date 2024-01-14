@@ -13,6 +13,10 @@ if "Apple" in sys.version:
 
 from gym import error
 
+from pyvirtualdisplay import Display
+display = Display(visible=0, size=(400, 300))
+display.start()
+
 try:
     import pyglet
 except ImportError as e:
@@ -43,6 +47,7 @@ def get_display(spec):
 
 class Viewer(object):
     def __init__(self, width, height, display=None):
+        print(f"spec: {display}")
         display = get_display(display)
         print(f"display: {display}")
         self.width = width
