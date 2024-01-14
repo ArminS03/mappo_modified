@@ -314,4 +314,4 @@ class MPERunner(Runner):
         print(f'duration: {type(self.all_args.render_episodes)}')
         if self.all_args.save_gifs:
             print("saving ...")
-            imageio.mimsave('/content/mappo_modified/render.mp4', all_frames, duration=self.all_args.render_episodes)
+            imageio.mimsave('/content/mappo_modified/render.mp4', all_frames, fps=25)
