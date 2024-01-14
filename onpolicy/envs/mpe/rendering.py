@@ -44,7 +44,7 @@ def get_display(spec):
 class Viewer(object):
     def __init__(self, width, height, display=None):
         display = get_display(display)
-
+        print(f"display: {display}")
         self.width = width
         self.height = height
 
