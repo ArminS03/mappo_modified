@@ -128,7 +128,7 @@ def main(args):
 
     runner = Runner(config)
     runner.render()
-    
+    print('render_done')
     # post process
     envs.close()
 
