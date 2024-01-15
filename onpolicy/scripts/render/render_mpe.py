@@ -128,9 +128,9 @@ def main(args):
 
     runner = Runner(config)
     runner.render()
-    print('render_done')
     # post process
-    # envs.close()
+    envs.close()
 
 if __name__ == "__main__":
     main(sys.argv[1:])
+    sys.exit(0)
